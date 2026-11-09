@@ -1,0 +1,13 @@
+@startuml
+class Game
+class Player
+class Level
+class Enemy
+class Weapon
+Game "1" *-- "1" Player
+Game "1" *-- "1" Level
+Player "0..*" --> "1" Level : nalazi se u
+Level "1" *-- "1..*" Enemy
+Level "1" *-- "0..*" Weapon
+Player "0..1" *-- "0..1" Weapon : nosi
+@enduml
